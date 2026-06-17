@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container">
         <Link href="/" className="logo">
-          welcome to my komson studio
+        Son
         </Link>
 
         <button
@@ -28,16 +28,16 @@ export default function Navbar() {
             <Link href="/about">เกี่ยวกับเรา</Link>
           </li>
           <li>
-            <Link href="/dashboard">Dashboard</Link>
+            <Link href="/Dashboard">Dashboard</Link>
           </li>
           <li>
-            <Link href="/profile">Profile</Link>
+            <Link href="/Profile">Profile</Link>
           </li>
           <li>
             <Link href="/login">Login</Link>
           </li>
           <li>
-            <Link href="/register">Register</Link>
+            <Link href="/Register">Register</Link>
           </li>
         </ul>
       </div>
