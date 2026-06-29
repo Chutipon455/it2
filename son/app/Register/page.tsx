@@ -3,10 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-
-export default function register() {
-
-     const router = useRouter();
+export default function RegisterPage() {
+  const router = useRouter();
 
   const [form, setForm] = useState({
     name: "",
@@ -29,23 +27,30 @@ export default function register() {
     }
   }
 
-    return (
-        <div className="auth-page">
-            <form className="auth-card" onSubmit={handleSubmit}>
-                <h1>สมัครสมาชิก</h1>
-                <input placeholder="ชื่อ นามสกุล"
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                 />
-                <input placeholder="Email" 
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                />
-                <input placeholder="Password"
-                onChange={(e) => setForm({ ...form, password: e.target.value })}
-                 />
-                <button> Regirter </button>
-            </form>
-        </div>
+  return (
+    <div className="auth-page">
+      <form className="auth-card" onSubmit={handleSubmit}>
+        <h1>Register</h1>
 
+        <input
+          placeholder="Name"
+          onChange={(e) => setForm({ ...form, name: e.target.value })}
+        />
 
-    );
+        <input
+          placeholder="Email"
+          type="email"
+          onChange={(e) => setForm({ ...form, email: e.target.value })}
+        />
+
+        <input
+          placeholder="Password"
+          type="password"
+          onChange={(e) => setForm({ ...form, password: e.target.value })}
+        />
+
+        <button>Register</button>
+      </form>
+    </div>
+  );
 }
